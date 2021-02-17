@@ -1,0 +1,16 @@
+<?php
+/**
+* Code recaptcha for load form by ajax
+*
+*/
+
+// Add this Code inside header
+?><script src="https://www.google.com/recaptcha/api.js" async defer></script><?php 
+
+//And enqueue this code
+	if ( ! wp_script_is( 'google-recaptcha', 'registered' ) ) {
+            wpcf7_recaptcha_enqueue_scripts();
+        }
+    wp_enqueue_script( 'google-recaptcha' );
+    
+    ?>
